@@ -1,0 +1,14 @@
+.navbar {
+    background-color: #143788;
+}
+
+.nav-item {
+    font-size: 15px;
+}
+.nav-item a {
+    color: white;
+}
+
+.nav-item a:hover {
+    color: cyan;
+}
