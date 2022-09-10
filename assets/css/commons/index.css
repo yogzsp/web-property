@@ -1,14 +1,65 @@
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #fccb90;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right,
+    #ee7724,
+    #d8363a,
+    #dd3675,
+    #b44593
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+}
+
+@media (min-width: 768px) {
+  .gradient-form {
+    height: 100vh !important;
+  }
+}
+@media (min-width: 769px) {
+  .gradient-custom-2 {
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+  }
+}
+body {
+  background-color: whitesmoke;
+}
 .navbar {
     background-color: #143788;
 }
-
 .nav-item {
-    font-size: 15px;
+  font-size: 15px;
 }
 .nav-item a {
-    color: white;
+  color: white;
 }
 
 .nav-item a:hover {
-    color: cyan;
+  color: cyan;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-left {
+  flex-basis: 55%;
+}
+
+.main-left .imgs {
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.main-right {
+  flex-basis: 40%;
 }
