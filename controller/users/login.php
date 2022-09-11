@@ -1,9 +1,6 @@
 <?php
  session_start();
 
- if(isset($_SESSION["login"])){
-    header('Location: ../../index.php');
- }
  require('../../database/db.php');
 
  if (isset($_POST['login'])) {
@@ -21,11 +18,11 @@
              if($row['level'] == 'admin'){
                 $_SESSION["login"] = true;
                 $_SESSION["id"] = $row["id"];
-                header('Location: ../../index.php');
+                header('Location: ../../pages/admin/admin.php');
              }else if($row['level'] == 'customer'){
                 $_SESSION["login"] = true;
                 $_SESSION["id"] = $row["id"];
-                header('Location: ../../pages/booking_details/booking.php');
+                header('Location: ../../index.php');
              }
          }else{
              header('Location: ../../pages/users/login.php?status=wrong');
