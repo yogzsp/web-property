@@ -102,12 +102,6 @@
                 </thead>
                 <?php
 
-                // if (isset($_GET['kode_blok'])) {
-                //     $perumahan = trim($_GET['kode_blok']);
-                //     // $detail = "SELECT * from detail_perumahan WHERE blok='$perumahan' ORDER BY id ASC";
-                // } else {
-                //     // $detail = "SELECT * FROM detail_perumahan ORDER BY id ASC";
-                // }
 
                 $hasil = mysqli_query($db, "SELECT * FROM detail_perumahan");
                 $no = 0;

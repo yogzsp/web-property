@@ -17,9 +17,12 @@
                 document.location='../../index.php';
                 </script>";
         }else{
-            header('Location: ../../pages/booking/form_booking.php?status=failed');
+            echo "<script>
+                alert('Rumah gagal di booking');
+                document.location='../../index.php';
+                </script>";
         }
 
-      }
+    }
 
 ?>

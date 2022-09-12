@@ -1,8 +1,12 @@
 <?php
-include('../../../database/db.php');
 session_start();
 
-if(!isset($_SESSION["login"])){
+include('../../../database/db.php');
+
+$result = mysqli_query($db, "SELECT * FROM booking");
+
+
+if (!isset($_SESSION["login"])) {
     header('Location: ../../../pages/users/login.php');
 }
 ?>
@@ -21,9 +25,7 @@ if(!isset($_SESSION["login"])){
 
     <!-- Custom fonts for this template -->
     <link href="../../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="../../../assets/css/sb-admin-2.min.css" rel="stylesheet">
@@ -102,11 +104,9 @@ if(!isset($_SESSION["login"])){
                     </form>
 
                     <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
@@ -122,15 +122,12 @@ if(!isset($_SESSION["login"])){
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
-                                <img class="img-profile rounded-circle"
-                                    src="../../../assets/img/admin.png">
+                                <img class="img-profile rounded-circle" src="../../../assets/img/admin.png">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
@@ -171,24 +168,35 @@ if(!isset($_SESSION["login"])){
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>No</th>
+                                            <th>Nama Konsumen</th>
+                                            <th>Alamat</th>
+                                            <th>No Handphone</th>
+                                            <th>Uang Booking</th>
+                                            <th>Kode Blok</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
-                                        </tr>
-                                    </tbody>
+                                    <?php
+                                    $no = 0;
+                                    while ($row = mysqli_fetch_array($result)) {
+                                        $no++;
+                                    ?>
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;"><?= $no; ?></td>
+                                                <td><?= $row['nama_konsumen'] ?></td>
+                                                <td><?= $row['alamat'] ?></td>
+                                                <td><?= $row['no_handphone'] ?></td>
+                                                <td><?= $row['uang_booking'] ?></td>
+                                                <td><?= $row['kode_blok'] ?></td>
+                                                <td>
+                                                    <a href="#" class="btn btn-info">Lunas</a>
+                                                    <a href="#" class="btn btn-danger">Detail</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    <?php } ?>
                                 </table>
                             </div>
                         </div>
@@ -222,8 +230,7 @@ if(!isset($_SESSION["login"])){
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
