@@ -1,8 +1,7 @@
 <?php
-require('../../database/db.php');
+ require('../../database/db.php');
 
-$result = mysqli_query($db, "SELECT * FROM tbl_perumahan");
-$result1 = mysqli_query($db, "SELECT * FROM tbl_perumahan");
+ $blok_perumahan = mysqli_query($db, "SELECT * FROM tbl_perumahan");
 
 ?>
 <!DOCTYPE html>
@@ -55,8 +54,8 @@ $result1 = mysqli_query($db, "SELECT * FROM tbl_perumahan");
     </nav>
     <div class="container">
         <section class="main-left">
-            <img src="../../assets/img/commons/img1.png" alt="" class="imgs">
-        </section>
+            <img src="../../assets/img/commons/img1.png" alt="" class="imgs" style="margin-right: 50px;">
+        </section>  
         <section class="main-right">
             <br>
             <h4>Data Perumahan</h4>
@@ -68,12 +67,12 @@ $result1 = mysqli_query($db, "SELECT * FROM tbl_perumahan");
                         <?php
 
                         $no = 0;
-                        while ($data = mysqli_fetch_array($result)) {
+                        while ($data = mysqli_fetch_array($blok_perumahan)) {
                             $no++;
 
                             $ket = "";
                             if (isset($_GET['nama_blok'])) {
-                                $perumahan = trim($_GET['nama_blok']);
+                                $perumahan = trim($_GET['kode_perumahan']);
 
                                 if ($perumahan == $data['kode_perumahan']) {
                                     $ket = "selected";
@@ -87,7 +86,7 @@ $result1 = mysqli_query($db, "SELECT * FROM tbl_perumahan");
                     </select>
                 </div>
                 <div class="form-group">
-                    <input type="submit" class="btn btn-info" value="Pilih">
+                    <input type="submit" class="btn btn-info" value="pilih">
                 </div>
             </form>
 
@@ -96,36 +95,33 @@ $result1 = mysqli_query($db, "SELECT * FROM tbl_perumahan");
                 <thead style="text-align:center ;">
                     <tr>
                         <th>No</th>
-                        <th>ID</th>
-                        <th>Nama</th>
-                        <th>Blok</th>
-                        <th>Aksi</th>
+                        <th style="width: 120px;">Kode Blok</th>
+                        <th style="width: 130px;">Nama Blok</th>
+                        <th style="width: 280px;">Aksi</th>
                     </tr>
                 </thead>
                 <?php
 
-                if (isset($_GET['nama_blok'])) {
-                    $perumahan = trim($_GET['nama_blok']);
-                    $sql = "select * from tbl_detail_perumahan where blok='$perumahan' order by id asc";
-                } else {
-                    $sql = "select * from tbl_detail_perumahan order by id asc";
-                }
+                // if (isset($_GET['kode_blok'])) {
+                //     $perumahan = trim($_GET['kode_blok']);
+                //     // $detail = "SELECT * from detail_perumahan WHERE blok='$perumahan' ORDER BY id ASC";
+                // } else {
+                //     // $detail = "SELECT * FROM detail_perumahan ORDER BY id ASC";
+                // }
 
-
-                $hasil = mysqli_query($db, $sql);
+                $hasil = mysqli_query($db, "SELECT * FROM detail_perumahan");
                 $no = 0;
                 while ($data = mysqli_fetch_array($hasil)) {
                     $no++;
                 ?>
                     <tbody style="text-align: center;">
                         <tr>
-                            <td><?php echo $no; ?></td>
-                            <td><?php echo $data["id"]; ?></td>
-                            <td><?php echo $data["nama"];   ?></td>
-                            <td><?php echo $data["blok"];   ?></td>
-                            <td><input type="submit" class="btn btn-info" value="B">
-                                <input type="submit" class="btn btn-warning" value="U">
-                                <input type="submit" class="btn btn-danger" value="D">
+                            <td><?= $no; ?></td>
+                            <td><?= $data['kode_blok'];   ?></td>
+                            <td><?= $data['nama'];   ?></td>
+                            <td>
+                                <a href="form_booking.php?id=<?= $data['id']; ?>" class="btn btn-info">Booking</a>
+                                <a href="" class="btn btn-danger" onclick="return confirm('Yakin mau menghapus <?= $data['kode_blok'] ?>?'">Delete</a>
                             </td>
                         </tr>
                     </tbody>
