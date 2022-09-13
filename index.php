@@ -5,7 +5,7 @@ if(!isset($_SESSION["login"])){
     header('Location: pages/users/login.php');
 }
 ?>
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -20,33 +20,38 @@ if(!isset($_SESSION["login"])){
 </head>
 
 <body>
-    <nav class="navbar fixed" style="background-color: #143788;">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #143788;">
         <div class="container-fluid">
             <div class="logo">
                 <img src="assets/img/commons/home.png" alt="" width="50px" style="margin-left: 15px;">
             </div>
-            <ul class="nav" style="margin-right: 20px;">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">HOME</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./pages/booking/booking.php">BOOKING</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">LOKASI</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">BERITA</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="controller/users/logout.php">LOGOUT</a>
-                </li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0" style="margin-right: 20px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/booking/booking.php">BOOKING</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">LOKASI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BERITA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="controller/users/logout.php">LOGOUT</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <div class="content">
         <div class="img-content">
-            <img src="assets/img/commons/img1.png" alt="" width="100%" height="700px">
+            <img src="assets/img/commons/img1.png" alt="" width="100%" height="700px" style="object-fit:cover;">
         </div>
     </div>
 
@@ -79,18 +84,18 @@ if(!isset($_SESSION["login"])){
 
         <div class="container-fluid" style="background-color: #dddddd; width: 98%;">
             <div class="d-flex justify-content-around row row-cols-3" style="color: #2d4d75; padding: 6px;">
-                <div class="col">FEATURED PROPERTY</div>
+                <div class="col hide-m">FEATURED PROPERTY</div>
                 <div class="col">SEWA PROPERTY</div>
                 <div class="col">JUAL PROPERTY</div>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid mt-3" style="width: 98%;">
-        <div class="d-flex justify-content-around row row-cols-3" style="color: #2d4d75; padding: 6px;">
-            <div class="col">
+    <div class="container mt-3" style="width: 98%;">
+        <div class="flex-center-m d-flex justify-content-around row row-cols-3" style="color: #2d4d75; padding: 6px;">
+            <div class="col hide-m">
                 <div class="card-right" style="height: 370px;">
-                    <img src="./assets/img/commons/img1.png" class="card-img" alt="...">
+                    <img src="./assets/img/commons/rumah.jpg" class="card-img" alt="...">
                     <div class="card-title-right">
                       <p style="font-weight: bold;color: #c9c60e;">Rp. 200.000.000</p>
                       <p>
@@ -106,7 +111,7 @@ if(!isset($_SESSION["login"])){
             </div>
         
             <div class="col">
-                <div class="card mb-3" style="max-width: 540px;border: none;border-radius: 0%;">
+                <div class="card mb-3" style="border: none;border-radius: 0%;">
                     <div class="row g-0">
                       <div class="col-md-8">
                         <div class="card-body margin-5" style="font-weight: bold;">
@@ -129,7 +134,7 @@ if(!isset($_SESSION["login"])){
                         </div>
                       </div>
                       <div class="col-md-4">
-                        <img src="./assets/img/commons/img1.png" class="img-fluid" alt="..." style="height: 100%;object-fit: cover;">
+                        <img src="./assets/img/commons/rumah.jpg" class="img-fluid" alt="..." style="height: 100%;object-fit: cover;">
                       </div>
                     </div>
                   </div>
@@ -157,7 +162,7 @@ if(!isset($_SESSION["login"])){
                         </div>
                       </div>
                       <div class="col-md-4">
-                        <img src="./assets/img/commons/img1.png" class="img-fluid" alt="..." style="height: 100%;object-fit: cover;">
+                        <img src="./assets/img/commons/rumah.jpg" class="img-fluid" alt="..." style="height: 100%;object-fit: cover;">
                       </div>
                     </div>
                   </div>
@@ -187,7 +192,7 @@ if(!isset($_SESSION["login"])){
                         </div>
                       </div>
                       <div class="col-md-4">
-                        <img src="./assets/img/commons/img1.png" class="img-fluid" alt="..." style="height: 100%;object-fit: cover;">
+                        <img src="./assets/img/commons/rumah.jpg" class="img-fluid" alt="..." style="height: 100%;object-fit: cover;">
                       </div>
                     </div>
                   </div>
@@ -215,7 +220,7 @@ if(!isset($_SESSION["login"])){
                         </div>
                       </div>
                       <div class="col-md-4">
-                        <img src="./assets/img/commons/img1.png" class="img-fluid" alt="..." style="height: 100%;object-fit: cover;">
+                        <img src="./assets/img/commons/rumah.jpg" class="img-fluid" alt="..." style="height: 100%;object-fit: cover;">
                       </div>
                     </div>
                   </div>
