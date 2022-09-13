@@ -1,3 +1,7 @@
+.bg-blue{
+  background-color: #143788;
+  color:white;
+}
 .gradient-custom-2 {
   /* fallback for old browsers */
   background: #fccb90;
@@ -25,6 +29,44 @@
     border-top-right-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
   }
+}
+.card-right{
+  position: relative;
+  overflow: hidden;
+}
+.card-right > .card-title-right{
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: rgb(20, 55, 136,0.8);
+  color: white;
+  width: 50%;
+  height: 100%;
+  padding: 12px;
+  display: block;
+}
+.card-title-right > *{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.card-desc > *{
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.margin-5 > *{
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+  font-weight: bold;
+}
+i{
+  margin-right: 5px;
+}
+.card-right > img{
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  height: 100%;
 }
 body {
   background-color: whitesmoke;
