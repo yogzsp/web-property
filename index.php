@@ -90,7 +90,7 @@ if(!isset($_SESSION["login"])){
         <div class="d-flex justify-content-around row row-cols-3" style="color: #2d4d75; padding: 6px;">
             <div class="col">
                 <div class="card-right" style="height: 370px;">
-                    <img src="./assets/img/commons/rumah.jpg" class="card-img" alt="...">
+                    <img src="./assets/img/commons/img1.png" class="card-img" alt="...">
                     <div class="card-title-right">
                       <p style="font-weight: bold;color: #c9c60e;">Rp. 200.000.000</p>
                       <p>
@@ -129,7 +129,7 @@ if(!isset($_SESSION["login"])){
                         </div>
                       </div>
                       <div class="col-md-4">
-                        <img src="./assets/img/commons/rumah.jpg" class="img-fluid" alt="..." style="height: 100%;object-fit: cover;">
+                        <img src="./assets/img/commons/img1.png" class="img-fluid" alt="..." style="height: 100%;object-fit: cover;">
                       </div>
                     </div>
                   </div>
@@ -157,7 +157,7 @@ if(!isset($_SESSION["login"])){
                         </div>
                       </div>
                       <div class="col-md-4">
-                        <img src="./assets/img/commons/rumah.jpg" class="img-fluid" alt="..." style="height: 100%;object-fit: cover;">
+                        <img src="./assets/img/commons/img1.png" class="img-fluid" alt="..." style="height: 100%;object-fit: cover;">
                       </div>
                     </div>
                   </div>
@@ -187,7 +187,7 @@ if(!isset($_SESSION["login"])){
                         </div>
                       </div>
                       <div class="col-md-4">
-                        <img src="./assets/img/commons/rumah.jpg" class="img-fluid" alt="..." style="height: 100%;object-fit: cover;">
+                        <img src="./assets/img/commons/img1.png" class="img-fluid" alt="..." style="height: 100%;object-fit: cover;">
                       </div>
                     </div>
                   </div>
@@ -215,7 +215,7 @@ if(!isset($_SESSION["login"])){
                         </div>
                       </div>
                       <div class="col-md-4">
-                        <img src="./assets/img/commons/rumah.jpg" class="img-fluid" alt="..." style="height: 100%;object-fit: cover;">
+                        <img src="./assets/img/commons/img1.png" class="img-fluid" alt="..." style="height: 100%;object-fit: cover;">
                       </div>
                     </div>
                   </div>
