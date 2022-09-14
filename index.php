@@ -20,33 +20,28 @@ if(!isset($_SESSION["login"])){
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #143788;">
+    <nav class="navbar fixed" style="background-color: #143788;">
         <div class="container-fluid">
             <div class="logo">
                 <img src="assets/img/commons/home.png" alt="" width="50px" style="margin-left: 15px;">
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0" style="margin-right: 20px;">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/booking/booking.php">BOOKING</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">LOKASI</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">BERITA</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="controller/users/logout.php">LOGOUT</a>
-                    </li>
-                </ul>
-            </div>
+            <ul class="nav" style="margin-right: 20px;">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/booking/booking.php">BOOKING</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">LOKASI</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">BERITA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="controller/users/logout.php">LOGOUT</a>
+                </li>
+            </ul>
         </div>
     </nav>
     <div class="content">
