@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Siteplan</title>
         <style>
             * {
                 list-style: none;
@@ -881,6 +881,30 @@
         </style>
     </head>
     <body>
+        <nav class="navbar fixed" style="background-color: #143788;">
+        <div class="container-fluid">
+            <div class="logo">
+                <img src="assets/img/commons/home.png" alt="" width="50px" style="margin-left: 15px;">
+            </div>
+            <ul class="nav" style="margin-right: 20px;">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/booking/booking.php">BOOKING</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">LOKASI</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">BERITA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="controller/users/logout.php">LOGOUT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
         <div class="site-plan" style="min-width:1366px;max-width:1366px;position:relative">
             <img src="../../sitesplan.png" alt="" class="imgs"/>
             <table class="X1">
