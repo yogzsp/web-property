@@ -88,7 +88,7 @@
                         </div>
                     </div>
                     <div class="aksi-tombol w-100 mt-2" style="display: inline;">
-                        <button type="submit" class="form-input-button bg-blue" style="width: 100px;">Booking</button>
+                        <a href="../booking/form_booking.php"><button type="submit" class="form-input-button bg-blue" style="width: 100px;">Booking</button></a>
                         <button type="submit" class="form-input-button bg-blue" style="width: 100px;background-color: rgb(201, 182, 17);">Edit</button>
                     </div>
                 </div>
